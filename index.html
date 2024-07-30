@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Landing Page</title>
+    <title>Select Your Email</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background: url('https://artparts.co/wp-content/uploads/2019/12/Paper-Towel.gif') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
-        }
-        h1 {
-            color: #333;
-        }
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .button {
-            background-color: #007BFF;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            text-align: center;
         }
-        .button:hover {
-            background-color: #0056b3;
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .bookmark {
+            margin: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .bookmark img {
+            display: block;
+            margin: 0 auto 10px;
+            width: 64px;
+            height: 64px;
         }
     </style>
 </head>
 <body>
-    <h1>Select Your Email</h1>
-    <div class="button-container">
-        <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" class="button" target="_blank">HOTMAIL [willsfischer]</a>
-        <a href="https://mail.google.com/mail/u/0/#inbox" class="button" target="_blank">GMAIL [williamsfischer2002]</a>
-        <a href="https://outlook.live.com/mail/?login_hint=williamsfischer2002%40outlook.com&actSwt=true" class="button" target="_blank">OUTLOOK [williamsfischer2002]</a>
-        <a href="https://outlook.live.com/mail/?login_hint=ws_fischer%40hotmail.com&actSwt=true" class="button" target="_blank">HOTMAIL [ws_fischer]</a>
-        <!-- Add more buttons as needed -->
+    <div class="container">
+        <div class="bookmark">
+            <a href="https://docs.google.com/document/create" target="_blank">
+                <img src="google-docs-logo.png" alt="Google Docs Logo">
+                New Google Doc
+            </a>
+        </div>
+        <div class="bookmark">
+            <a href="https://docs.google.com/document/u/0/" target="_blank">
+                <img src="google-docs-logo.png" alt="Google Docs Logo">
+                Google Docs Homepage
+            </a>
+        </div>
     </div>
 </body>
 </html>
