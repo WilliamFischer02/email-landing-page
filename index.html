@@ -17,21 +17,26 @@
             color: white;
             text-align: center;
         }
+
         .container {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
         }
+
         h1 {
             font-size: 2em;
             font-weight: bold;
+            margin-bottom: 20px;
         }
+
         .button-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
         }
+
         .button {
             background-color: #007BFF;
             color: white;
@@ -42,15 +47,46 @@
             font-weight: bold;
             display: flex;
             align-items: center;
+            justify-content: center;
+            width: 250px;
+            height: 60px;
+            position: relative;
             transition: background-color 0.3s ease;
+            background-size: cover;
+            background-position: center;
         }
+
         .button:hover {
             background-color: #0056b3;
         }
-        .button img {
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: center;
+            opacity: 0.5;
+        }
+
+        .hotmail-1::before {
+            background-image: url('https://1000logos.net/wp-content/uploads/2022/01/Outlook-Logo-2012.png');
+        }
+
+        .gmail::before {
+            background-image: url('https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg');
+        }
+
+        .outlook::before {
+            background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*yIdf68xM6_VE9UoV');
+        }
+
+        .hotmail-2::before {
+            background-image: url('https://1000logos.net/wp-content/uploads/2022/01/Outlook-Logo-2012.png');
         }
     </style>
 </head>
@@ -58,23 +94,10 @@
     <div class="container">
         <h1>Select Your Email</h1>
         <div class="button-container">
-            <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" class="button" target="_blank">
-                <img src="outlook-logo.png" alt="Outlook Logo">
-                HOTMAIL [willsfischer]
-            </a>
-            <a href="https://mail.google.com/mail/u/0/#inbox" class="button" target="_blank">
-                <img src="gmail-logo.png" alt="Gmail Logo">
-                GMAIL [williamsfischer2002]
-            </a>
-            <a href="https://outlook.live.com/mail/?login_hint=williamsfischer2002%40outlook.com&actSwt=true" class="button" target="_blank">
-                <img src="outlook-logo.png" alt="Outlook Logo">
-                OUTLOOK [williamsfischer2002]
-            </a>
-            <a href="https://outlook.live.com/mail/?login_hint=ws_fischer%40hotmail.com&actSwt=true" class="button" target="_blank">
-                <img src="outlook-logo.png" alt="Outlook Logo">
-                HOTMAIL [ws_fischer]
-            </a>
-            <!-- Add more buttons as needed -->
+            <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" class="button hotmail-1" target="_blank">HOTMAIL [willsfischer]</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="button gmail" target="_blank">GMAIL [williamsfischer2002]</a>
+            <a href="https://outlook.live.com/mail/?login_hint=williamsfischer2002%40outlook.com&actSwt=true" class="button outlook" target="_blank">OUTLOOK [williamsfischer2002]</a>
+            <a href="https://outlook.live.com/mail/?login_hint=ws_fischer%40hotmail.com&actSwt=true" class="button hotmail-2" target="_blank">HOTMAIL [ws_fischer]</a>
         </div>
     </div>
 </body>

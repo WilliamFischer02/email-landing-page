@@ -1,29 +1,28 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: url('https://artparts.co/wp-content/uploads/2019/12/Paper-Towel.gif') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
+    color: white;
+    text-align: center;
 }
 
-/* Heading styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
 h1 {
-    color: #333;
+    font-size: 2em;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Container for buttons */
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -31,18 +30,54 @@ h1 {
     justify-content: center;
 }
 
-/* Button styling */
 .button {
     background-color: #007BFF;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 60px;
+    position: relative;
     transition: background-color 0.3s ease;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Button hover effect */
 .button:hover {
     background-color: #0056b3;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.hotmail-1::before {
+    background-image: url('https://1000logos.net/wp-content/uploads/2022/01/Outlook-Logo-2012.png');
+}
+
+.gmail::before {
+    background-image: url('https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg');
+}
+
+.outlook::before {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*yIdf68xM6_VE9UoV');
+}
+
+.hotmail-2::before {
+    background-image: url('https://1000logos.net/wp-content/uploads/2022/01/Outlook-Logo-2012.png');
 }
