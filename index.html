@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Email Links</title>
+    <title>Email Landing Page</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -22,39 +22,59 @@
             padding: 20px;
             border-radius: 10px;
         }
-        .bookmark {
-            margin: 20px;
-            font-size: 1.5em;
+        h1 {
+            font-size: 2em;
             font-weight: bold;
         }
-        .bookmark img {
-            display: block;
-            margin: 0 auto 10px;
-            width: 64px;
-            height: 64px;
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        
-        <div class="bookmark">
-            <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" target="_blank">
+        <h1>Select Your Email</h1>
+        <div class="button-container">
+            <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" class="button" target="_blank">
                 <img src="outlook-logo.png" alt="Outlook Logo">
                 HOTMAIL [willsfischer]
             </a>
-        </div>
-        <div class="bookmark">
-            <a href="https://mail.google.com/" target="_blank">
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="button" target="_blank">
+                <img src="gmail-logo.png" alt="Gmail Logo">
+                GMAIL [williamsfischer2002]
+            </a>
+            <a href="https://outlook.live.com/mail/?login_hint=williamsfischer2002%40outlook.com&actSwt=true" class="button" target="_blank">
                 <img src="outlook-logo.png" alt="Outlook Logo">
-                Gmail
+                OUTLOOK [williamsfischer2002]
             </a>
-        </div>
-        <div class="bookmark">
-            <a href="https://mail.yahoo.com/" target="_blank">
-                <img src="yahoo-logo.png" alt="Yahoo Mail Logo">
-                Yahoo Mail
+            <a href="https://outlook.live.com/mail/?login_hint=ws_fischer%40hotmail.com&actSwt=true" class="button" target="_blank">
+                <img src="outlook-logo.png" alt="Outlook Logo">
+                HOTMAIL [ws_fischer]
             </a>
+            <!-- Add more buttons as needed -->
         </div>
     </div>
 </body>
