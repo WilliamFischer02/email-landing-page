@@ -3,102 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Landing Page</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: url('https://artparts.co/wp-content/uploads/2019/12/Paper-Towel.gif') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 250px;
-            height: 60px;
-            position: relative;
-            transition: background-color 0.3s ease;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-repeat: no-repeat;
-            background-size: 40px 40px;
-            background-position: center;
-            opacity: 0.5;
-        }
-
-        .hotmail-1::before {
-            background-image: url('https://1000logos.net/wp-content/uploads/2022/01/Outlook-Logo-2012.png');
-        }
-
-        .gmail::before {
-            background-image: url('https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg');
-        }
-
-        .outlook::before {
-            background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*yIdf68xM6_VE9UoV');
-        }
-
-        .hotmail-2::before {
-            background-image: url('https://1000logos.net/wp-content/uploads/2022/01/Outlook-Logo-2012.png');
-        }
-    </style>
+    <title>Email Hub</title>
+    <meta name="description" content="A personal email landing page with quick access to inboxes and popular webmail services.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Select Your Email</h1>
-        <div class="button-container">
-            <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" class="button hotmail-1" target="_blank">HOTMAIL [willsfischer]</a>
-            <a href="https://mail.google.com/mail/u/0/#inbox" class="button gmail" target="_blank">GMAIL [williamsfischer2002]</a>
-            <a href="https://outlook.live.com/mail/?login_hint=williamsfischer2002%40outlook.com&actSwt=true" class="button outlook" target="_blank">OUTLOOK [williamsfischer2002]</a>
-            <a href="https://outlook.live.com/mail/?login_hint=ws_fischer%40hotmail.com&actSwt=true" class="button hotmail-2" target="_blank">HOTMAIL [ws_fischer]</a>
-        </div>
-    </div>
+    <main class="page-shell">
+        <section class="panel" aria-labelledby="page-title">
+            <header class="hero">
+                <p class="eyebrow">Personal Dashboard</p>
+                <h1 id="page-title">Email Hub</h1>
+                <p class="subtitle">Quickly jump into your most-used inboxes or open another email provider in one click.</p>
+            </header>
+
+            <section class="section" aria-labelledby="accounts-title">
+                <h2 id="accounts-title">My Accounts</h2>
+                <div class="grid">
+                    <a href="https://outlook.live.com/mail/?login_hint=willsfischer%40hotmail.com&actSwt=true" class="email-card outlook" target="_blank" rel="noopener noreferrer">
+                        <span class="service">Hotmail</span>
+                        <span class="account">willsfischer</span>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="email-card gmail" target="_blank" rel="noopener noreferrer">
+                        <span class="service">Gmail</span>
+                        <span class="account">williamsfischer2002</span>
+                    </a>
+                    <a href="https://outlook.live.com/mail/?login_hint=williamsfischer2002%40outlook.com&actSwt=true" class="email-card outlook" target="_blank" rel="noopener noreferrer">
+                        <span class="service">Outlook</span>
+                        <span class="account">williamsfischer2002</span>
+                    </a>
+                    <a href="https://outlook.live.com/mail/?login_hint=ws_fischer%40hotmail.com&actSwt=true" class="email-card outlook" target="_blank" rel="noopener noreferrer">
+                        <span class="service">Hotmail</span>
+                        <span class="account">ws_fischer</span>
+                    </a>
+                    <a href="https://mail.google.com/mail/?authuser=goob.apparel.ga%40gmail.com#inbox" class="email-card gmail" target="_blank" rel="noopener noreferrer">
+                        <span class="service">Gmail</span>
+                        <span class="account">goob.apparel.ga</span>
+                    </a>
+                    <a href="https://mail.google.com/mail/?authuser=goob.entertainment.co%40gmail.com#inbox" class="email-card gmail" target="_blank" rel="noopener noreferrer">
+                        <span class="service">Gmail</span>
+                        <span class="account">goob.entertainment.co</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="providers-title">
+                <h2 id="providers-title">Other Email Sites</h2>
+                <div class="quick-links">
+                    <a href="https://mail.yahoo.com" target="_blank" rel="noopener noreferrer">Yahoo Mail</a>
+                    <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a>
+                    <a href="https://www.icloud.com/mail" target="_blank" rel="noopener noreferrer">iCloud Mail</a>
+                    <a href="https://mail.aol.com" target="_blank" rel="noopener noreferrer">AOL Mail</a>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 </html>
